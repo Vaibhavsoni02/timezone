@@ -1,0 +1,53 @@
+// Common timezone abbreviations -> the IANA zone(s) they refer to.
+// Typed into search (e.g. "IST", "PST", "AEST"), these resolve to real cities
+// in FIO_CITIES (see js/cities.js, which is now the single source of truth
+// for places). Some abbreviations are genuinely ambiguous (IST, CST) so they
+// map to a short, labeled list rather than guessing a single "winner".
+const FIO_ABBR_MAP = {
+  IST: [
+    { tz: "Asia/Kolkata", label: "India Standard Time" },
+    { tz: "Asia/Jerusalem", label: "Israel Standard Time" },
+    { tz: "Europe/Dublin", label: "Irish Standard Time" },
+  ],
+  EST: [{ tz: "America/New_York", label: "Eastern Standard Time" }],
+  EDT: [{ tz: "America/New_York", label: "Eastern Daylight Time" }],
+  ET: [{ tz: "America/New_York", label: "Eastern Time (US)" }],
+  CST: [
+    { tz: "America/Chicago", label: "Central Standard Time (US)" },
+    { tz: "Asia/Shanghai", label: "China Standard Time" },
+  ],
+  CDT: [{ tz: "America/Chicago", label: "Central Daylight Time" }],
+  CT: [{ tz: "America/Chicago", label: "Central Time (US)" }],
+  MST: [{ tz: "America/Denver", label: "Mountain Standard Time" }],
+  MDT: [{ tz: "America/Denver", label: "Mountain Daylight Time" }],
+  MT: [{ tz: "America/Denver", label: "Mountain Time (US)" }],
+  PST: [{ tz: "America/Los_Angeles", label: "Pacific Standard Time" }],
+  PDT: [{ tz: "America/Los_Angeles", label: "Pacific Daylight Time" }],
+  PT: [{ tz: "America/Los_Angeles", label: "Pacific Time (US)" }],
+  AKST: [{ tz: "America/Anchorage", label: "Alaska Standard Time" }],
+  HST: [{ tz: "Pacific/Honolulu", label: "Hawaii Standard Time" }],
+  GMT: [{ tz: "Europe/London", label: "Greenwich Mean Time" }],
+  BST: [{ tz: "Europe/London", label: "British Summer Time" }],
+  UTC: [{ tz: "UTC", label: "Coordinated Universal Time" }],
+  WET: [{ tz: "Europe/Lisbon", label: "Western European Time" }],
+  CET: [{ tz: "Europe/Paris", label: "Central European Time" }],
+  EET: [{ tz: "Europe/Athens", label: "Eastern European Time" }],
+  MSK: [{ tz: "Europe/Moscow", label: "Moscow Time" }],
+  TRT: [{ tz: "Europe/Istanbul", label: "Turkey Time" }],
+  GST: [{ tz: "Asia/Dubai", label: "Gulf Standard Time" }],
+  ICT: [{ tz: "Asia/Bangkok", label: "Indochina Time" }],
+  WIB: [{ tz: "Asia/Jakarta", label: "Western Indonesian Time" }],
+  SGT: [{ tz: "Asia/Singapore", label: "Singapore Time" }],
+  HKT: [{ tz: "Asia/Hong_Kong", label: "Hong Kong Time" }],
+  KST: [{ tz: "Asia/Seoul", label: "Korea Standard Time" }],
+  JST: [{ tz: "Asia/Tokyo", label: "Japan Standard Time" }],
+  AEST: [{ tz: "Australia/Sydney", label: "Australian Eastern Standard Time" }],
+  AEDT: [{ tz: "Australia/Sydney", label: "Australian Eastern Daylight Time" }],
+  AWST: [{ tz: "Australia/Perth", label: "Australian Western Standard Time" }],
+  NZST: [{ tz: "Pacific/Auckland", label: "New Zealand Standard Time" }],
+  NZDT: [{ tz: "Pacific/Auckland", label: "New Zealand Daylight Time" }],
+  WAT: [{ tz: "Africa/Lagos", label: "West Africa Time" }],
+  CAT: [{ tz: "Africa/Johannesburg", label: "Central Africa Time" }],
+  EAT: [{ tz: "Africa/Nairobi", label: "East Africa Time" }],
+  SAST: [{ tz: "Africa/Johannesburg", label: "South Africa Standard Time" }],
+};

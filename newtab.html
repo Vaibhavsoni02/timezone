@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>FIO Clone — New Tab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <button id="addZoneBtn" class="float-btn float-btn-add" title="Add a place" aria-label="Add a place">+</button>
+
+    <div class="float-actions">
+      <button id="formatToggle" class="float-btn" title="Toggle 12h / 24h">12h</button>
+      <button id="enableLocationBtn" class="float-btn" title="Use precise location for your time zone" aria-label="Use precise location">📡</button>
+    </div>
+
+    <div id="cardGrid" class="zone-list"></div>
+  </div>
+
+  <!-- Add place modal -->
+  <div id="modalOverlay" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h2 id="modalTitle">Add a place</h2>
+        <button id="modalClose" class="icon-btn" aria-label="Close">✕</button>
+      </div>
+      <label class="field-label" for="citySearch">Time zone</label>
+      <input id="citySearch" class="search-input" type="text" placeholder="Search a city or code — Los Angeles, PST, IST…" autocomplete="off" />
+      <div id="resultsList" class="results-list"></div>
+    </div>
+  </div>
+
+  <script src="js/timezones.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
