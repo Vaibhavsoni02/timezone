@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "FIO Clone — Time Zone Manager",
-  "short_name": "FIO Clone",
+  "name": "Time Zone Manager",
+  "short_name": "Timezone",
   "version": "1.0.0",
   "description": "Manage and instantly view time zones for locations in Chrome. Add up to 10 zones and see the time of day, sunrise, and sunset at a glance. Replaces your new tab.",
   "chrome_url_overrides": {
