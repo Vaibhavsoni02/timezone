@@ -88,7 +88,7 @@
   function defaultZones() {
     // The user's own zone is always shown as the locked home column, so seed
     // the list with a few useful examples instead of duplicating it here.
-    const wanted = ["America/New_York", "Europe/London", "Asia/Tokyo"];
+    const wanted = ["America/New_York", "Australia/Melbourne", "America/Los_Angeles"];
     const picks = [];
     for (const tz of wanted) {
       const match = FIO_CITIES.find((c) => c.timezone === tz);
