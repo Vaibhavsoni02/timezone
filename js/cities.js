@@ -642,6 +642,14 @@ const FIO_CITIES_RESPONSE = {
       "district": "Western Australia",
       "districtCode": "WA",
       "_country": { "_id": "aus000000000000000000000", "name": "Australia", "iso3": "AUS" }
+    },
+    {
+      "_id": "64a000000000000000000051",
+      "name": "San Francisco",
+      "timezone": "America/Los_Angeles",
+      "district": "California",
+      "districtCode": "CA",
+      "_country": { "_id": "usa000000000000000000000", "name": "United States", "iso3": "USA" }
     }
   ]
 };
